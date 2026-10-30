@@ -6,6 +6,8 @@ section below.
 
 ## Unreleased changes
 
+- Format non-whole Float metric values with 15 significant digits instead of `Float#to_s`, which is about twice as fast for full-precision values like measured durations. Received values are unchanged to within about 1e-15, relative; whole and non-finite Floats keep their usual formatting.
+
 ## Version 4.0.1
 
 - Normalize ASCII whitespace in metric names and prefixes, and newlines (`\n` and `\r`) in tags and set values, including aggregated and compiled metrics.
